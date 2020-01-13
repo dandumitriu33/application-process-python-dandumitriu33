@@ -106,6 +106,11 @@ def all_schools():
                            schools=schools)
 
 
+@app.route('/mentors-by-country')
+def mentors_by_country():
+    mentors = data_manager.get_mentors_by_country()
+    return render_template('mentors-by-country.html',
+                           mentors=mentors)
 
 
 if __name__ == '__main__':

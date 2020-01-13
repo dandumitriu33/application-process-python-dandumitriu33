@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block head %}{% endblock head %}
+
+{% block content %}
+
+<h1>Mentors by country</h1>
+
+{% for mentor in mentors %}
+
+    <p>
+        {{ mentor.country }}: {{ mentor.count }}
+    </p>
+
+{% endfor %}
+
+
+{% endblock content %}
