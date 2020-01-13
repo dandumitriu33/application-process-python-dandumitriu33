@@ -92,5 +92,12 @@ def info():
     return render_template('info.html')
 
 
+@app.route('/mentors')
+def mentor_and_city():
+    mentors = data_manager.get_mentor_and_city()
+    return render_template('mentors.html',
+                           mentors=mentors)
+
+
 if __name__ == '__main__':
     app.run(debug=True)

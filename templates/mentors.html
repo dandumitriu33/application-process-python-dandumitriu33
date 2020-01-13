@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block head %}{% endblock head %}
+
+
+
+
+{% block content %}
+
+<h1>Mentor and city</h1>
+
+{% for mentor in mentors %}
+
+<p>
+    {{ mentor.first_name }} {{ mentor.last_name }} {{ mentor.name }} {{ mentor.country }}
+</p>
+
+{% endfor %}
+
+
+
+{% endblock content %}

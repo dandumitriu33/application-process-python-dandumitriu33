@@ -119,3 +119,15 @@ def delete_applicant_by_part_email(cursor, part_email):
         return f"{part_email} applicants successfully deleted."
     except psycopg2.IntegrityError:
         return f'Applicants with the "{part_email}" cannot be deleted.'
+
+
+@database_common.connection_handler
+def get_mentor_and_city(cursor):
+    cursor.execute("""
+                    SELECT first_name, last_name, s.name, s.country FROM mentors
+                    JOIN schools AS s on mentors.city = s.city
+                    ORDER BY mentors.id ASC;
+                   """
+                   )
+    mentors = cursor.fetchall()
+    return mentors
