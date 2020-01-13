@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block head %}{% endblock head %}
+
+
+
+{% block content %}
+
+<h1>Applicants</h1>
+
+{% for applicant in applicants %}
+
+    <p>
+        {{ applicant.first_name }} {{ applicant.application_code }} {{ applicant.creation_date }}
+    </p>
+
+{% endfor %}
+
+{% endblock content %}

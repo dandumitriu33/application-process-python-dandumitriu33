@@ -120,5 +120,12 @@ def contacts():
                            contacts=contacts)
 
 
+@app.route('/applicants')
+def applicants():
+    applicants = data_manager.get_applicants()
+    return render_template('applicants.html',
+                           applicants=applicants)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
