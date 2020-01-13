@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<title>All applicants</title>
+{% endblock head %}
+
+{% block content %}
+
+
+    <p>
+        {% for applicant_name in applicant_names %}
+            <p>
+            {{ applicant_name.first_name }} {{ applicant_name.last_name }} {{ applicant_name.phone_number }}<br>
+            {{ applicant_name.email }} {{ applicant_name.application_code }}<br>
+            </p>
+        {% endfor %}
+    </p>
+
+
+    {% include 'footer.html' %}
+{% endblock %}

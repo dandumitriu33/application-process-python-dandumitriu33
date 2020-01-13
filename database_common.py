@@ -49,3 +49,8 @@ def connection_handler(function):
         return ret_value
 
     return wrapper
+
+
+
+user_name = os.environ.get('PSQL_USER_NAME')
+print(user_name)

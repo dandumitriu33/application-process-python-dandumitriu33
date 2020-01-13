@@ -1,8 +1,76 @@
-body {
-    background-color: #008e9d;
-    color: white;
+html {
+    background-color: rgb(123,33,30);
 }
 
+body {
+    background-color: rgb(123,33,30);
+    color: rgb(174,223,242);
+}
+
+h1 {
+    text-align: center;
+}
+
+p, ul {
+    padding: 2px;
+    font-size: 90%;
+}
+
+li {
+    list-style-position: inside;
+    font-size: 90%;
+}
+
+/* classes */
+
 .content-wrapper {
-    padding: 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 9px;
+}
+
+.content-wrapper > .query {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(70,139,166);
+    box-shadow: 3px 3px 3px rgb(64,19,19);
+    text-align: center;
+    text-decoration: none;
+    color: rgb(64,19,19);
+}
+
+.home-button {
+    position: fixed;
+    bottom: 15px;
+    right: 12px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    box-shadow: 3px 3px 6px rgb(64,35,0);
+}
+
+.home-button:hover {
+    background-color: rgb(64,19,19);
+}
+
+.info-button {
+    position: fixed;
+    bottom: 75px;
+    right: 10px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    box-shadow: 3px 3px 6px rgb(64,35,0);
+}
+
+.info-button:hover {
+    background-color: rgb(64,19,19);
+}
+
+.info-image {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 3px 3px 6px rgb(64,35,0);
 }

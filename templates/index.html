@@ -1,5 +1,25 @@
 {% extends "layout.html" %}
 
+{% block head %}
+<title>Application process</title>
+{% endblock head %}
+
+
 {% block content %}
-    <a href="{{ url_for('mentor_names') }}">Mentor names</a>
+
+
+    <div class="content-wrapper">
+    <a href="{{ url_for('all_applicants') }}" class="query">ALL APPLICANTS</a>
+    <a href="{{ url_for('all_mentors') }}" class="query">ALL MENTORS</a>
+    <a href="{{ url_for('mentor_names') }}" class="query">MENTOR NAMES</a>
+    <a href="{{ url_for('nicknames') }}" class="query">NICKNAMES</a>
+    <a href="{{ url_for('carol_hat') }}" class="query">CAROL'S HAT</a>
+    <a href="{{ url_for('adipisci') }}" class="query">ADIPISCINGENIMMI UNIVERSITY</a>
+    <a href="{{ url_for('add_markus') }}" class="query">ADD MARKUS</a>
+    <a href="{{ url_for('update_jemima') }}" class="query">UPDATE JEMIMA</a>
+    <a href="{{ url_for('check_jemima') }}" class="query">CHECK JEMIMA</a>
+    <a href="{{ url_for('delete_mauriseu') }}" class="query">DELETE MAURISEU.NET</a>
+    </div>
+
+
 {% endblock %}

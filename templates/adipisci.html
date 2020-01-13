@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<title>Adipiscingenimmi University</title>
+{% endblock head %}
+
+{% block content %}
+
+    <p>
+        {% for applicant_name in applicant_names %}
+            {{ applicant_name.first_name }} {{ applicant_name.last_name }} {{ applicant_name.phone_number }} {{ applicant_name.email }}<br>
+        {% endfor%}
+    </p>
+
+    {% include 'footer.html' %}
+{% endblock %}

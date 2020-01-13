@@ -1,20 +1,18 @@
 {% extends "layout.html" %}
 
 {% block head %}
-<title>Mentor names</title>
+<title>Nicknames</title>
 {% endblock head %}
 
 {% block content %}
 
-
     <p>
-        {% for mentor_name in mentor_names %}
+        {% for nickname in nicknames %}
             <p>
-                {{ mentor_name.first_name }} {{ mentor_name.last_name }}<br>
+                {{ nickname.first_name }} "{{ nickname.nick_name }}" {{ nickname.last_name }}
             </p>
         {% endfor%}
-    <p>
-
+    </p>
 
     {% include 'footer.html' %}
 {% endblock %}

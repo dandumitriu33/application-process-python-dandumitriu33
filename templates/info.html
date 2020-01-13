@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<title>Info</title>
+{% endblock head %}
+
+{% block content %}
+
+    <h1>Codecool</h1>
+
+    <p>
+        Welcome to the information page.
+    </p>
+    <p>
+        This is an educational project simulating an application management
+        process for new potential students.
+    </p>
+    <p>
+        The site is designed to resemble an actual app more than a typical browsing
+        website. The main focuses were:
+        <ul>
+            <li><strong>tidyness</strong> or lack of clutter - in order for
+                the user to not be flooded by too many things on the screen
+            </li>
+            <li><strong>mobile first</strong> - it is not the best Responsive
+                Design but it's a decent attempt. Depending on what browser
+                you are on, you can Google the steps to see the website in
+                Responsive Design mode. On Firefox you can go to Menu > Web
+                Developer > Responsive Design Mode
+            </li>
+            <li><strong>productivity</strong> - the information can be easily
+                copied and pasted in both mobile and desktop mode by the user
+            </li>
+        </ul>
+    </p>
+    <p>
+        Another benefit of the mobile first is that on a desktop you can now
+    do this:
+    </p>
+    <img src="/static/img/screen_use.jpg" class="info-image">
+    <p>
+
+    </p>
+
+
+    {% include 'footer.html' %}
+{% endblock %}

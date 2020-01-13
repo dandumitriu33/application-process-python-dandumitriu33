@@ -2,13 +2,36 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Application process</title>
+
+        {% block head %}{% endblock head %}
+
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     </head>
+
+
     <body>
-        <div class="content-wrapper">
-            {% block content %} {% endblock %}
-        </div>
+        <a href="{{ url_for('index') }}" >
+            <img src="/static/img/codecool_logo.png"
+                 width="40"
+                 title="Home"
+                 class="home-button">
+        </a>
+        <a href="{{ url_for('info') }}">
+            <img src="/static/img/info_button.png"
+                 width="43"
+                 height="40"
+                 title="Info"
+                 class="info-button">
+        </a>
+
+
+        {% block content %}
+
+
+        {% endblock %}
+
+
+
     </body>
 </html>
 

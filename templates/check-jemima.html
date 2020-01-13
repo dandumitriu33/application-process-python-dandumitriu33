@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<title>Update Jemima</title>
+{% endblock head %}
+
+{% block content %}
+
+    <p>
+        {% for detail in applicant_details %}
+            {{ "The phone number of " + detail.first_name + " " + detail.last_name + " is: " + detail.phone_number + "." }}
+        {% endfor %}
+    </p>
+
+    {% include 'footer.html' %}
+{% endblock %}
