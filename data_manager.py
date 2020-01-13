@@ -181,3 +181,17 @@ def get_applicants(cursor):
                    )
     applicants = cursor.fetchall()
     return applicants
+
+
+@database_common.connection_handler
+def get_applicants_and_mentors(cursor):
+    cursor.execute("""
+                    SELECT applicants.first_name, applicants.application_code, mentors.first_name AS mfn, mentors.last_name AS mln  FROM applicants
+                    LEFT JOIN applicants_mentors ON applicants.id = applicants_mentors.applicant_id
+                    LEFT JOIN mentors ON applicants_mentors.mentor_id = mentors.id
+                    ORDER BY applicants.id DESC;
+
+                   """
+                   )
+    applicants = cursor.fetchall()
+    return applicants
