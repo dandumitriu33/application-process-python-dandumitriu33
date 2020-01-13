@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block head %}{% endblock head %}
+
+
+{% block content %}
+
+<h1>All schools</h1>
+
+{% for school in schools %}
+
+<p>
+    {{ school.first_name }} <span></span>
+    {{ school.last_name }} <span></span>
+        {% if school.name %}
+            {{ school.name }}
+        {% else %}
+            No data.
+        {% endif %}
+    <span></span>
+        {% if school.country %}
+            {{ school.country }}
+        {% else %}
+            No data.
+        {% endif %}
+</p>
+
+{% endfor %}
+
+{% endblock content %}

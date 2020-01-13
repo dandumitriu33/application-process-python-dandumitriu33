@@ -125,9 +125,21 @@ def delete_applicant_by_part_email(cursor, part_email):
 def get_mentor_and_city(cursor):
     cursor.execute("""
                     SELECT first_name, last_name, s.name, s.country FROM mentors
-                    JOIN schools AS s on mentors.city = s.city
+                    JOIN schools AS s ON mentors.city = s.city
                     ORDER BY mentors.id ASC;
                    """
                    )
     mentors = cursor.fetchall()
     return mentors
+
+
+@database_common.connection_handler
+def get_all_schools(cursor):
+    cursor.execute("""
+                    SELECT first_name, last_name, s.name, s.country FROM mentors
+                    RIGHT JOIN schools AS s ON mentors.city = s.city
+                    ORDER BY mentors.id ASC;
+                   """
+                   )
+    schools = cursor.fetchall()
+    return schools

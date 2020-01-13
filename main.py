@@ -99,5 +99,14 @@ def mentor_and_city():
                            mentors=mentors)
 
 
+@app.route('/all-school')
+def all_schools():
+    schools = data_manager.get_all_schools()
+    return render_template('all-schools.html',
+                           schools=schools)
+
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
